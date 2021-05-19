@@ -1,0 +1,182 @@
+/* Global */
+
+/*
+https://coolors.co/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0 
+#463f3a Dark Lava
+#8a817c Middle Grey
+#bcb8b1 Pale Silver
+#f4f3ee Alabaster
+#e0afa0 Melon
+*/
+
+html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.body-flex {
+    height: 100vh;
+    background-color: #463f3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-0.3rem);
+    }
+    20% {
+        transform: translateY(0.3rem);
+    }
+    40% {
+        transform: translateY(-0.2rem);
+    }
+    60% {
+        transform: translateY(0.2rem);
+    }
+    80% {
+        transform: translateY(-0.1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360000deg);
+    }
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(.3);
+        border-radius: 100%;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(.3);
+        border-radius: 100%;
+    }
+}
+
+/* Main */
+
+.title {
+    color: #f4f3ee;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.title h1 {
+    color: #bcb8b1;
+    font-size: 30px;
+}
+
+.big-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background: #0d1117;
+    color: #bcb8b1;
+    margin: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px #463f3a;
+}
+
+.shake-box:hover {
+    color: #e0afa0;
+    animation: shake 1.2s 1;
+}
+
+/* Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+form label {
+    color: #f4f3ee;
+    margin-top: 10px;
+}
+
+form button {
+    border-radius: 15px;
+    background-color: #bcb8b1;
+    color: black;
+    margin: 20px 0;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e0afa0;
+    color: white;
+}
+
+/* 1 */
+
+.spin-box:hover {
+    animation: spinner 1s infinite;
+}
+
+/* 2 */
+
+.stretch-box:hover {
+    animation: stretch 2s infinite;
+}
+
+
+/* 3 */
+
+.gone-box:hover {
+    background-color: #463f3a;
+    color: tomato;
+    font-size: 90px;
+}
+
+/* 4 */
+
+.frame-weather {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .big-box {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 448px) {
+    .big-box {
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
