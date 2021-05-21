@@ -179,4 +179,13 @@ form button:hover {
         flex-direction: column;
         align-items: center;
     }
+    .navbar-nav{
+        flex-direction: row !important;
+        padding-top: 10px;
+    }
+    .navbar-nav li {
+        margin-right: 5px;
+    }
+
+    
 }
